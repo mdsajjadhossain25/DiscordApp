@@ -10,6 +10,13 @@
       </div>
       <div class="layout__body">
         <h2 class="auth__tagline">Find your study partner</h2>
+        {% if messages %}
+        <ul class="messages" style="list-style: none; color: red;">
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
 
         <form class="form" action="" method="POST">
           {% csrf_token %}
@@ -103,7 +110,7 @@
 
         <div class="auth__action">
           <p>Already signed up yet?</p>
-          <a href="{% url 'login' %}" class="btn btn--link">Sign Up</a>
+          <a href="{% url 'login' %}" class="btn btn--link">Sign In</a>
         </div>
       </div>
     </div>
