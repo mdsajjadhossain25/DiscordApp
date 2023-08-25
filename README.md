@@ -26,7 +26,7 @@ Go to the project directory
   cd DiscordApp
 ```
 
-In case you want to remove my env folder you will have to create virtual environment by yourself.
+Create virtual Environment
 
 ```bash
   python -m venv env
